@@ -27,18 +27,18 @@ class NS2TRAnalyzer(App):
         # Replace 'script1.awk', 'script2.awk', 'script3.awk' with the actual paths to your AWK scripts
         selected_file = self.file_chooser.selection and self.file_chooser.selection[0]
         if selected_file:     
-            # script1 = 'e2edelay.awk'
+            script1 = 'e2edelay.awk'
             script2 = 'tp.awk'
             script3 = 'pdr.awk'
 
             try:
                 # Run the AWK scripts with the selected file and capture the output
-                # output1 = subprocess.check_output(['awk', '-f', script1, selected_file]).decode('utf-8')
+                output1 = subprocess.check_output(['awk', '-f', script1, selected_file]).decode('utf-8')
                 output2 = subprocess.check_output(['awk', '-f', script2, selected_file]).decode('utf-8')
                 output3 = subprocess.check_output(['awk', '-f', script3, selected_file]).decode('utf-8')
 
                 # Update the label with the output
-                output_text = f'\n\nScript 2 Output:\n{output2}\n\nScript 3 Output:\n{output3}'
+                output_text = f'End to End Delay:{output1}\nAverage throughput:{output2}\nPacket Delivery Ratio:{output3}\n'
                 self.output_label.text = output_text
             except subprocess.CalledProcessError as e:
                 error_message = f'Error occurred while running AWK scripts:\n{e.output.decode("utf-8")}'

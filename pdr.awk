@@ -39,6 +39,6 @@ $0 ~/^f.* RTR/ {
  
 #最后输出结果 
 END {
-        printf "cbr s:%d r:%d, r/s Ratio:%.4f, f:%d \n", sendLine, recvLine, (recvLine/sendLine),fowardLine;
+        printf "%.4f \n",(recvLine/sendLine);
 
 }
