@@ -2,9 +2,9 @@
 this program was created to simply the process of calculating various values from trace file that are generated from NS2 trace files.<br>trace file extension `.tr`
 
 packages used - <li>Kivy (for ui)
-<li> subprocessbr
-<br>
-the calculations are done by the awk scripts
+<li> subprocess
+<br><br>
+*the calculations are done by the awk scripts*
 
 to run this file create a virtual environment and install the requirements.txt file
 
