@@ -4,7 +4,7 @@ this program was created to simply the process of calculating various values fro
 packages used - <li>Kivy (for ui)
 <li> subprocess
 <br><br>
-**the calculations are done by the awk scripts**
+<em><strong>the calculations are done by the awk scripts</strong></em>
 
 to run this file create a virtual environment and install the requirements.txt file
 
